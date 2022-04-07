@@ -1,0 +1,13 @@
+{
+  "name": "@myhealthco/temp-socket-server",
+  "version": "0.0.1",
+  "description": "A temporary websocket server based on express to test communication between the patient-portal-ui and a local server",
+  "author": "Daniel Furman",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

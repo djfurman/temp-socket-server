@@ -11,8 +11,3 @@ Need a temporary server to get some testing done using my headless application.
 ## Disclaimer
 
 This is called "temp-socket-server" for a reason, it's temporary :) This is only to support some local tests for a headless UI application. I don't intend this to be production code.
-
-## ToDos
-
-1. Run `npm install --save express`
-1. Run `npm install --save express-ws`

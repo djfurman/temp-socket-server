@@ -4,10 +4,13 @@
   "description": "A temporary websocket server based on express to test communication between the patient-portal-ui and a local server",
   "author": "Daniel Furman",
   "license": "BSD-3-Clause",
+  "type": "module",
   "scripts": {
     "dev": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-ws": "^5.0.2"
+  }
 }

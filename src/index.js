@@ -2,7 +2,7 @@ import express from 'express'
 import expressWs from 'express-ws'
 import http from 'http'
 
-const port = 3500;
+const port = 3500
 
 let app = express()
 

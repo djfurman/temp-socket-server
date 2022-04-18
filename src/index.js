@@ -44,7 +44,7 @@ const fakeMessages = {
     {
       conversationId: '39817aa2-505f-4e78-bd67-279f7efc7125:d3c0c15f9cb5:aed672:2',
       subject: 'Secure Message',
-      from: 'Dr. Green',
+      from: 'Revvit, PhD',
       at: new Date("2022-03-21T17:13:51"),
       body: 'Lab results are in everything looks great, let me know if there any issues, otherwise I will see you at your next appointment.',
       isRead: false,
@@ -52,7 +52,7 @@ const fakeMessages = {
     {
       conversationId: '39817aa2-505f-4e78-bd67-279f7efc7125:d3c0c15f9cb5:aed672:1',
       subject: 'Test results?',
-      from: 'John Cleese',
+      from: 'John Doe',
       at: new Date("2022-03-16T09:32:13"),
       body: 'I know these test can take a while but please let me know when you get the results',
       isRead: true,

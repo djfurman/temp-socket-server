@@ -1,3 +1,10 @@
+/*
+ * This simple express server mocks the real service and is _only_ for testing the UI
+ * The production instance will be hosted via AWS API Gateway, authenticated by Cognito
+ * The application logic would exist as lambda functions with distinct IAM policies
+ * The persistence layer would live in several DynamoDB tables with appropriate KMS keys
+ * Since API Gateway exposes both websocket and HTTP interfaces, it's fitting to mock them here
+ */
 import express from 'express'
 import expressWs from 'express-ws'
 import http from 'http'

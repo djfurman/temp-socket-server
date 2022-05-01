@@ -39,6 +39,44 @@ app.get('/demo', (req, res) => {
   res.status(200).json(successPayload)
 })
 
+const fakeBasicIds = {
+  '39817aa2-505f-4e78-bd67-279f7efc7125': {
+    avatarUri: null,
+    name: {
+      given: 'John',
+      surname: 'Doe',
+    }
+  },
+  '0da9da80-8538-4139-a208-c03d319dbc05': {
+    avatarUri: 'https://bulma.io/images/placeholders/128x128.png',
+    name: {
+      given: 'Jane',
+      surname: 'Doe'
+    }
+  },
+}
+
+app.get('/patients/:patientId/basicId', (req, res) => {
+  // Here we'd validate the user tried to authenticate
+  if (!req.get('authorization')) {  // let's assume for the moment that any auth token is fine
+    res.status(401).json({ status: 'fail', data: null, message: 'authorization header is required to access a protected endpoint, provide a valid token and reattempt your request' })
+  }
+
+  //Here we'd check to see what patient(s) _this_ authenticated user can access
+  const isAuthorized = true  // Let's assume for the moment they are authorized
+  if (!isAuthorized) {
+    res.status(403).json({ status: 'fail', data: null, message: 'user is not authorized to see messages for this patientId' })
+  }
+
+  const patientId = req.params.patientId
+  if (patientId in fakeBasicIds) {
+    res.status(200).json({ status: 'success', data: fakeBasicIds[patientId] })
+  } else {
+    res.status(404).json({ status: 'fail', data: null, message: `patientId ${patientId} is not available in the mock` })
+  }
+
+})
+
 const fakeMessages = {
   messages: [
     {

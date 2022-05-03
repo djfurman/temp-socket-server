@@ -42,19 +42,15 @@ app.get('/demo', (req, res) => {
 const fakeBasicIds = {
   '39817aa2-505f-4e78-bd67-279f7efc7125': {
     picture: null,
-    name: {
-      given_name: 'John',
-      family_name: 'Doe',
-      preferred_username: null,
-    }
+    givenName: 'John',
+    familyName: 'Doe',
+    preferredUsername: null,
   },
   '0da9da80-8538-4139-a208-c03d319dbc05': {
     picture: 'https://bulma.io/images/placeholders/128x128.png',
-    name: {
-      given_name: 'Jane',
-      family_name: 'Doe',
-      preferred_username: null,
-    }
+    givenName: 'Jane',
+    familyName: 'Doe',
+    preferredUsername: null,
   },
 }
 

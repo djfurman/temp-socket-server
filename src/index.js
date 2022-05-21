@@ -78,7 +78,15 @@ app.get('/demo/patients/:patientId/basicId', (req, res) => {
 const fakeMessages = {
   messages: [
     {
-      conversationId: '39817aa2-505f-4e78-bd67-279f7efc7125:d3c0c15f9cb5:aed672:2',
+      conversationId: '39817aa2-505f-4e78-bd67-279f7efc7125:d3c0c15f9cb5:aed672:cf8536:1',
+      subject: 'Side Effect?',
+      from: 'John Doe',
+      at: new Date("2022-04-21T08:12:49"),
+      body: '',
+      isRead: true,
+    },
+    {
+      conversationId: '39817aa2-505f-4e78-bd67-279f7efc7125:d3c0c15f9cb5:aed672:1c357c:2',
       subject: 'Secure Message',
       from: 'Revvit, PhD',
       at: new Date("2022-03-21T17:13:51"),
@@ -86,7 +94,7 @@ const fakeMessages = {
       isRead: false,
     },
     {
-      conversationId: '39817aa2-505f-4e78-bd67-279f7efc7125:d3c0c15f9cb5:aed672:1',
+      conversationId: '39817aa2-505f-4e78-bd67-279f7efc7125:d3c0c15f9cb5:aed672:1c357c:1',
       subject: 'Test results?',
       from: 'John Doe',
       at: new Date("2022-03-16T09:32:13"),

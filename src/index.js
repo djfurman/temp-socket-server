@@ -157,7 +157,7 @@ app.get('/demo/users/:userId/authorizations', (req, res) => {
   }
 
   // This argument would give us the system user's ID to lookup what patients they can access
-  // This endpoint supports both patient(s) and providers 
+  // This endpoint supports both patient(s) and providers
   // The access policies only differ in the namespace of the response
   console.log(req.params.userId)
 
@@ -168,8 +168,11 @@ app.get('/demo/users/:userId/authorizations', (req, res) => {
 // Websocket routes will go here
 app.ws('/ws', async function (ws, req) {
   ws.on('message', async function (msg) {
-    console.log(msg)
-    ws.send(JSON.stringify({ status: 'success', data: 'pong' }))
+    let messageData = JSON.parse(msg)
+    if (messageData.message === 'ping') {
+      console.log('Ping Message Received')
+      ws.send(JSON.stringify({ status: 'success', data: 'pong' }))
+    }
     // Listens for messages here
   })
 })
